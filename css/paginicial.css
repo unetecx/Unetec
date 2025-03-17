@@ -9,9 +9,11 @@
 :root{
     --pretao:black;
     --vermelhao:#ff3131;
+    --vermelho-escuro:#ad3030;
     --brancolas:white;
     --cinzolas:#d9d9d9;
     --cinzao:#5f5f5f;
+    --cinza-escuro:#181818;
     --fonte-poppins:"Poppins", sans-serif;
 }
 
@@ -54,10 +56,21 @@ header > nav{
     display: flex;
     flex-direction: row;
     gap:25px;
-    font-family: var(--fonte-poppins);
-    font-size: 18px;
-    color: var(--cinzao);
 }
+
+.opcoes-a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--cinzao);
+    font-size: 18px;
+    font-family: var(--fonte-poppins);
+}
+.opcoes-a:hover{
+    color: var(--cinza-escuro);
+    text-decoration: underline;
+}
+
+
 
 .login-logout{
     width: auto;
@@ -79,9 +92,13 @@ header > nav{
     cursor: pointer;
 }
 
+.button-login:hover{
+    font-size: 18px;
+}
+
 
 .button-cadastro{
-    width: 120px;
+    width: 124px;
     height: 4vh;
     background-color:var(--vermelhao);
     color: white;
@@ -90,6 +107,11 @@ header > nav{
     font-size: 16px;
     font-family: var(--fonte-poppins);
     cursor: pointer;    
+}
+
+.button-cadastro:hover{
+    background-color:var(--vermelho-escuro) ;
+    font-size: 17px;
 }
 
 .informacoes{
@@ -130,6 +152,11 @@ header > nav{
     font-size: 18px;
     font-family: var(--fonte-poppins); 
     cursor: pointer;
+}
+
+.button-entrar:hover{
+    background-color: var(--vermelho-escuro);
+    font-size: 20px;
 }
 
 .iamgem-inicial{

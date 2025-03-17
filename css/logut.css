@@ -9,6 +9,7 @@
 :root{
     --pretao:black;
     --vermelhao:#ff3131;
+    --vermelho-escuro:#ad3030;
     --brancolas:white;
     --cinzolas:#d9d9d9;
     --fonte-poppins:"Poppins", sans-serif;
@@ -92,6 +93,11 @@ main{
     font-size: 17px;
     font-family: var(--fonte-poppins); 
     cursor: pointer;
+}
+
+.button-registar:hover{
+    background-color: var(--vermelho-escuro);
+    font-size:18px ;
 }
 
 .entrar-com{

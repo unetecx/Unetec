@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../public/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../public/css/cadastro.css">
+    <title>Unetec</title>
+</head>
+<body>
+    <main>
+        <section class="registro">
+            <div class="logo">
+                <h1><span class="letra-preta">UN</span><span class="letra-vermelha">ETEC</span></h1>
+            </div>
+            <p>Registre-se para continuar</p>
+            <div class="div-fomr">
+                <form action="/register" method="post" id="form">
+                    <div class="div-inputs">
+                        <input type="text" id="nome" class="inputs" name="nome" placeholder="Nome Completo" required>
+                        <label id="label-nome" class="label-text"></label>
+                    </div>
+                    <div class="div-inputs">
+                        <input type="email" id="email" class="inputs" name="email" placeholder="Insira seu Email" required>
+                        <label id="label-email" class="label-text"></label>
+                    </div>
+                    <div class="div-inputs">
+                        <input list="Escolaridade" id="escolaridade" class="inputs" name="escolaridade" placeholder="Área de atuação" required>
+                        <datalist id="Escolaridade">
+                            <option value="Staff">
+                            <option value="Atletica">
+                            <option value="Gremio">
+                        </datalist>
+                        <label id="label-escolaridade" class="label-text"></label>
+                    </div>
+                    <div class="div-inputs">
+                        <input type="password" name="senha1" id="senha1" class="inputs" placeholder="Crie sua senha" required>
+                        <label id="label-senha1" class="label-text"></label>
+                    </div>
+                    <div class="div-inputs">
+                        <input type="password" name="senha2" id="senha2" class="inputs" placeholder="Confirme sua senha" required>
+                        <label id="label-senha2" class="label-text"></label>
+                    </div>
+                    <input type="submit" value="Enviar" class="button-submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="../../../public/js/validaForm.js"></script>
+</body>
+</html>

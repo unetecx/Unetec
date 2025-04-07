@@ -1,25 +1,31 @@
 // Importações
 import 'dotenv/config';
 import express from 'express';
-import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+import session from 'express-session';
+import cors from 'cors';
+import rota from './routes/router.js';
+import conectarMongo from './config/config.js';
 
+// Criando o app antes da conexão
 const app = express();
+const port = 3000;
 
-// Rota inicial
-app.get('/', (req, res) => {
-  
+
+//conectando ao banco
+conectarMongo();
+
+// Configurando JSON
+app.use(express.json());
+
+
+//Configurando cors
+app.use(cors()); 
+
+// Indica porta do servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
 });
 
-// Credenciais do banco de dados
-const dbUser = process.env.DB_USER;
-const dbPass = process.env.DB_PASS;
+//Utilizando as rotas
+app.use(rota);
 
-// Conectar ao MongoDB
-mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.h3x40l2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
-    .then(() => {
-        app.listen(3000)
-        console.log('Conectado ao banco de dados');
-    })
-    .catch((err) => console.log('Erro ao conectar ao banco:', err));
